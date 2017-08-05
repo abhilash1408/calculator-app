@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:id="@+id/MainRedBox"
+    android:orientation="vertical"
+
+    tools:context="com.example.mayora13.linearlayout.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/BigGreenBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        android:layout_weight="2"
+        android:background="#000">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="#002"
+            android:enabled="false"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:textColor="#fff"
+            android:textSize="30sp">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/del"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect_blue"
+            android:onClick="numInput"
+            android:text="DEL"
+            android:textColor="#fff"
+            android:textSize="20sp"></Button>
+
+        <Button
+            android:id="@+id/clr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect_blue"
+            android:onClick="numInput"
+            android:text="CLR"
+            android:textColor="#fff"
+            android:textSize="20sp">
+
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#000"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/sin"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="sin" />
+
+            <Button
+                android:id="@+id/cos"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="cos" />
+
+            <Button
+                android:id="@+id/tan"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="tan" />
+
+            <Button
+                android:id="@+id/ln"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="ln" />
+
+            <Button
+                android:id="@+id/log"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="log" />
+
+            <Button
+                android:id="@+id/pi"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="\u03C0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#000"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/seven"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/eight"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/nine"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="9" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/four"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/five"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/six"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/one"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/two"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/three"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/zero"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/dot"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_light"
+                    android:onClick="numInput"
+                    android:text="." />
+
+                <Button
+                    android:id="@+id/ans"
+                    style="@style/MidStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:text="Ans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/plus"
+                    style="@style/MyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="numInput"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/minus"
+                    style="@style/MyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="numInput"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/multi"
+                    style="@style/MyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="numInput"
+                    android:text="x" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/div"
+                    style="@style/MyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="numInput"
+                    android:text="\u00F7" />
+
+                <Button
+                    android:id="@+id/lb"
+                    style="@style/MyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="numInput"
+                    android:text="(" />
+
+                <Button
+                    android:id="@+id/rb"
+                    style="@style/MyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="numInput"
+                    android:text=")" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#000"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/dr"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+
+                android:onClick="dr"
+                android:text="DEG/rad"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/sqrt"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="\u221A" />
+
+            <Button
+                android:id="@+id/pow"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="^" />
+
+            <Button
+                android:id="@+id/exp"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="e^" />
+
+            <Button
+                android:id="@+id/equals"
+                style="@style/MyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="2.1"
+                android:background="@drawable/ripple_effect"
+                android:onClick="numInput"
+                android:text="=" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
